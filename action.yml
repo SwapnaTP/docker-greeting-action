@@ -1,0 +1,13 @@
+name: "Docker Greeting Action"
+description: "Prints a greeting using a Docker container"
+author: "Your Name"
+inputs:
+  name:
+    description: "Who to greet"
+    required: true
+    default: "World"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.name }}
